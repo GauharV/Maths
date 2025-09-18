@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class NumberManipulator {
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static String getInput(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextLine();
+    }
+
+    public static float getfloatInput(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextFloat();
+
+    }
+
+    public static void main(String[] args) {
+        float decnum;
+         decnum = getfloatInput("Enter a decimal number: ");
+         System.out.println(Math.ceil(decnum) + " is the smallest integer that is greater than or equal to "+ decnum);
+         System.out.println(Math.floor(decnum) + " is the largest integer that is less than or equal to "+ decnum);
+         System.out.println(Math.rint(decnum) + " is the closest integer to "+ decnum);
+         System.out.println(Math.round(decnum) + " is the closest integer to "+ decnum);
+    }
+}
